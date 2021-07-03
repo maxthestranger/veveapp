@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
-const Button = ({ value, theme }) => (
-  <TouchableOpacity style={[styles.button, styles[theme]]}>
+const Button = ({ value, theme, onPress }) => (
+  <TouchableOpacity style={[styles.button, styles[theme]]} onPress={onPress}>
     <Text
       style={{
         fontWeight: "bold",

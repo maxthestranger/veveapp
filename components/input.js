@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, TextInput } from "react-native";
 
-const Input = ({ placeholder }) => (
-    <TextInput style={styles.input} placeholder={placeholder} />
+const Input = ({ placeholder, maxLength, keyboardType }) => (
+    <TextInput keyboardType={keyboardType} style={styles.input} placeholder={placeholder} maxLength={maxLength} />
 );
 
 const styles = StyleSheet.create({

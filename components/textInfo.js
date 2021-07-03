@@ -13,13 +13,19 @@ const styles = StyleSheet.create({
   },
   medium: {
     color: "#364A63",
-    fontSize: 27,
+    fontSize: 25,
+    fontWeight: 'bold',
+  },
+  mid: {
+    color: "#364A63",
+    fontSize: 22,
     fontWeight: 'bold',
   },
   small: {
     fontSize: 16,
     color: "#8094AE",
     fontWeight: 'normal',
+    lineHeight: 21,
   },
   center: {
     textAlign: "center",
