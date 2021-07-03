@@ -18,8 +18,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     flexDirection: "row",
-    borderBottomWidth: 1,
-    borderBottomColor: '#DBDFEA',
+    marginBottom: 10,
   },
   title: {
     color: "#364A63",
@@ -29,7 +28,9 @@ const styles = StyleSheet.create({
     marginRight: "auto",
   },
   back: {
-    padding: 10,
+    paddingBottom: 10,
+    paddingTop: 10,
+    paddingRight: 10,
   }
 });
 

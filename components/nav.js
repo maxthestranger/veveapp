@@ -5,12 +5,12 @@ import house from "../assets/icon/house.png";
 import basket from "../assets/icon/basket.png";
 import heart from "../assets/icon/heart.png";
 
-const Nav = () => (
+const Nav = ({onPress}) => (
   <View style={styles.nav}>
     <TouchableOpacity style={styles.menuBar}>
       <Image source={house} style={styles.img} />
     </TouchableOpacity>
-    <TouchableOpacity style={styles.menuBar}>
+    <TouchableOpacity style={styles.menuBar} onPress={onPress}>
       <Image source={basket} style={styles.img} />
     </TouchableOpacity>
     <TouchableOpacity style={styles.menuBar}>

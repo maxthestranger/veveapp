@@ -12,38 +12,36 @@ import Constants from "expo-constants";
 import TextInfo from "../components/textInfo";
 import Button from "../components/button";
 import Input from "../components/input";
-import ButtonRounded from "../components/buttonRound";
+import MenuTitle from "../components/menuTitle";
 import Search from '../components/search';
 import SecTitle from "../components/secTitle";
-import CatCard from "../components/catCard";
+import ProdCard from "../components/prodCard";
 import Nav from "../components/nav";
 
-import { products } from "../modules/dummyData";
-import plus from '../assets/images/plus.png';
+import { suppliers } from "../modules/dummyData";
+import prof from '../assets/images/prof.jpg';
 
-const Home = ({navigation}) => {
+const SupplierDetails = ({navigation}) => {
   return (
     <SafeAreaView style={StyleSheet.container}>
       <ScrollView style={styles.scrollView}>
         <View style={{paddingVertical: 20}} />
-        <Search />
-        <SecTitle value="Categories" />
-        <View style={styles.grid}>
-          {
-            products.map((product, index) => (
-              <CatCard key={index} name={product.name} img={product.imgUrl} onPress={() => navigation.navigate('prodDetail')} />
-            ))
-          }
+        <MenuTitle value="Supplier" onPress={() => navigation.goBack()} />
+        <SecTitle value={suppliers[0].name} />
+        <TextInfo value={suppliers[0].location} fs="small" align="left" />
+        <View style={{borderRadius: 13, paddingTop: 10}}>
+            <Image source={prof} style={{width: 350, height: 120, borderRadius: 13}} />
         </View>
-        <SecTitle value="Favourite Suppliers" />
-        <View style={styles.fav}>
-           <TouchableOpacity style={styles.addFav} onPress={() => navigation.navigate('supplier')}>
-              <Image source={plus} style={{width: 34, height: 34}} />
-           </TouchableOpacity>
+        <SecTitle value="Products" />
+        <View style={styles.grid}>
+            <ProdCard />
+            <ProdCard />
+            <ProdCard />
+            <ProdCard />
         </View>
       </ScrollView>
       <View style={{position: 'absolute', left: 0, bottom: 0, width: '100%',}}>
-        <Nav onPress={() => navigation.navigate('bucket')} />
+        <Nav />
       </View>
     </SafeAreaView>
   );
@@ -69,18 +67,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  fav: {},
-  addFav: {
-    height: 86,
-    borderStyle: 'dashed',
-    borderWidth: 1,
-    borderColor: '#364A63',
-    width: '30%',
-    borderRadius: 13,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
 });
 
-export default Home;
+export default SupplierDetails;

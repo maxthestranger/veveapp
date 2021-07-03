@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, ImageBackground, View, TouchableOpacity, Text } from "react-native";
 
-const CatCard = ({ name, img }) => (
-  <TouchableOpacity style={styles.card}>
+const CatCard = ({ name, img, onPress }) => (
+  <TouchableOpacity style={styles.card} onPress={onPress}>
     <ImageBackground source={img} style={styles.bgImg}>
       <View style={styles.bgText}>
         <Text style={styles.text}>{name}</Text>

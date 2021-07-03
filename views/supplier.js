@@ -12,38 +12,32 @@ import Constants from "expo-constants";
 import TextInfo from "../components/textInfo";
 import Button from "../components/button";
 import Input from "../components/input";
-import ButtonRounded from "../components/buttonRound";
+import MenuTitle from "../components/menuTitle";
 import Search from '../components/search';
 import SecTitle from "../components/secTitle";
-import CatCard from "../components/catCard";
+import SupCard from "../components/supCard";
 import Nav from "../components/nav";
 
-import { products } from "../modules/dummyData";
+import { suppliers } from "../modules/dummyData";
 import plus from '../assets/images/plus.png';
 
-const Home = ({navigation}) => {
+const Supplier = ({navigation}) => {
   return (
     <SafeAreaView style={StyleSheet.container}>
       <ScrollView style={styles.scrollView}>
         <View style={{paddingVertical: 20}} />
+        <MenuTitle value="Supplier" onPress={() => navigation.goBack()} />
         <Search />
-        <SecTitle value="Categories" />
         <View style={styles.grid}>
           {
-            products.map((product, index) => (
-              <CatCard key={index} name={product.name} img={product.imgUrl} onPress={() => navigation.navigate('prodDetail')} />
+            suppliers.map((supplier, index) => (
+              <SupCard key={index} name={supplier.name} location={supplier.location} imgUrl={supplier.imgUrl} deliveryTime={supplier.deliveryTime} distance={supplier.distance} verified={supplier.verified} onPress={() => navigation.navigate('supplierDetails')} />
             ))
           }
         </View>
-        <SecTitle value="Favourite Suppliers" />
-        <View style={styles.fav}>
-           <TouchableOpacity style={styles.addFav} onPress={() => navigation.navigate('supplier')}>
-              <Image source={plus} style={{width: 34, height: 34}} />
-           </TouchableOpacity>
-        </View>
       </ScrollView>
       <View style={{position: 'absolute', left: 0, bottom: 0, width: '100%',}}>
-        <Nav onPress={() => navigation.navigate('bucket')} />
+        <Nav />
       </View>
     </SafeAreaView>
   );
@@ -83,4 +77,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Home;
+export default Supplier;
