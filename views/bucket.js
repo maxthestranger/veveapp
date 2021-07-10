@@ -19,16 +19,19 @@ import SecTitle from "../components/secTitle";
 import Nav from "../components/nav";
 
 import { suppliers } from "../modules/dummyData";
-import prof from '../assets/images/prof.jpg';
+import cart from '../assets/images/cart.png';
 
 const Bucket = ({navigation}) => {
   return (
     <SafeAreaView style={StyleSheet.container}>
       <ScrollView style={styles.scrollView}>
         <View style={{paddingVertical: 20}} />
-        <MenuTitle value="Alsi" onPress={() => navigation.goBack()} />
+        <MenuTitle value="Cart" onPress={() => navigation.goBack()} />
         <View style={styles.grid}>
-            <Text>Under Development</Text>
+          <View style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center',}}>
+              <Image source={cart} style={{width: 371, height: 305}} />
+          </View>
+          <TextInfo value="Your cart is empty Please add a few items." fs="medium" align="center" />
         </View>
       </ScrollView>
       <View style={{position: 'absolute', left: 0, bottom: 0, width: '100%',}}>
@@ -55,7 +58,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 300
+    paddingHorizontal: 30,
   },
 });
 

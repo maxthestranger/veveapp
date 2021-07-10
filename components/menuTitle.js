@@ -5,7 +5,7 @@ import arrowLeft from "../assets/icon/arrow_left.png";
 const MenuTitle = ({ value, onPress }) => (
   <View style={styles.menu}>
     <TouchableOpacity onPress={onPress} style={styles.back}>
-      <Image source={arrowLeft} style={{ width: 15, height: 15 }} on />
+      <Image source={arrowLeft} style={{ width: 20, height: 15 }} on />
     </TouchableOpacity>
     <Text style={styles.title}>{value}</Text>
   </View>
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     marginBottom: 10,
+    paddingVertical: 10,
   },
   title: {
     color: "#364A63",

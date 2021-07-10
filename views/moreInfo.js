@@ -16,13 +16,14 @@ import moreinfo from '../assets/images/moreinfo.png';
 const MoreInfo = ({navigation}) => {
   return (
     <SafeAreaView style={StyleSheet.container}>
-      <ScrollView style={styles.scrollView}>
-      <Image source={moreinfo} style={{width: 250, height: 300}} />
-      <View style={{paddingVertical: 5}} />
+      <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1, justifyContent: 'flex-start'}}>
+     <View style={{width: '100%', marginBottom: 50}}>
+      <Image source={moreinfo} style={{width: 350, height: 420}} />
+     </View>
       <TextInfo value="On-demand Veve Delivery Solution" fs="large" align="left" />
       <View style={{paddingVertical: 10}} />
       <TextInfo value="Recommended features for the assignment of orders to trucks and drivers available nearby" fs="small" align="left" />
-      <View style={{display: 'flex', alignItems: 'flex-end', paddingVertical: 10}}>
+      <View style={{display: 'flex', alignItems: 'flex-end', paddingVertical: 30}}>
         <ButtonRounded onPress={() => navigation.navigate('home')} />
       </View>
       </ScrollView>
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     paddingHorizontal: 16,
     minHeight: '100%',
+    display: 'flex',
   },
   text: {
     fontSize: 42,

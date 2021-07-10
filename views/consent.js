@@ -21,7 +21,7 @@ const Consent = ({ navigation }) => {
   const navAuth = () => navigation.navigate("auth");
   return (
     <SafeAreaView style={StyleSheet.container}>
-      <ScrollView style={styles.scrollView}>
+      <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
         <View
           style={{
             width: "100%",
@@ -44,9 +44,9 @@ const Consent = ({ navigation }) => {
           fs="small"
           align="center"
         />
-        <View style={{ paddingVertical: 30 }}>
+        <View style={{ paddingVertical: 40 }}>
           <Button value="I am Over 18" theme="primary" onPress={navAuth} />
-          <View style={{ paddingVertical: 14 }} />
+          <View style={{ paddingVertical: 20 }} />
           <Button value="I am Under 18" theme="secondary" onPress={exitApp} />
         </View>
       </ScrollView>
@@ -62,6 +62,8 @@ const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: "#fff",
     paddingHorizontal: 16,
+    minHeight: '100%',
+    display: 'flex',
   },
   text: {
     fontSize: 42,

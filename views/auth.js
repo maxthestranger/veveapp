@@ -15,13 +15,13 @@ import Input from "../components/input";
 const Auth = ({navigation}) => {
   return (
     <SafeAreaView style={StyleSheet.container}>
-      <ScrollView style={styles.scrollView}>
+      <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
         <View style={{paddingTop: 80, paddingBottom: 20 }}>
             <TextInfo value="Login Account" fs="large" align="left" />
             <View style={{paddingVertical: 5}} />
             <TextInfo value="Hello, Welcome to the app" fs="small" align="left" />
         </View>
-        <View style={{paddingVertical: 32}}>
+        <View style={{paddingVertical: 40}}>
             <TextInfo value="Phone Number" fs="mid" align="left" />
             <View style={{paddingVertical: 5}} />
             <Input keyboardType="number-pad" placeholder="0792922304" maxLength={12} />
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     paddingHorizontal: 16,
     minHeight: '100%',
+    display: 'flex',
   },
   text: {
     fontSize: 42,

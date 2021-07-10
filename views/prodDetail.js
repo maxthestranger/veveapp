@@ -14,7 +14,7 @@ import TextInfo from "../components/textInfo";
 import Button from "../components/button";
 import Input from "../components/input";
 import MenuTitle from "../components/menuTitle";
-import Search from '../components/search';
+import ProdDetailCard from '../components/prodDetailCard';
 import SecTitle from "../components/secTitle";
 import Nav from "../components/nav";
 
@@ -26,10 +26,11 @@ const ProdDetail = ({navigation}) => {
     <SafeAreaView style={StyleSheet.container}>
       <ScrollView style={styles.scrollView}>
         <View style={{paddingVertical: 20}} />
-        <MenuTitle value="Alsi" onPress={() => navigation.goBack()} />
+        <MenuTitle value="{{Product name}}" onPress={() => navigation.goBack()} />
         <View style={styles.grid}>
-            <Text>Under Development</Text>
+            <ProdDetailCard />
         </View>
+        <Text>Development in Progress</Text> 
       </ScrollView>
       <View style={{position: 'absolute', left: 0, bottom: 0, width: '100%',}}>
         <Nav />

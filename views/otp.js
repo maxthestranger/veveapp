@@ -18,9 +18,11 @@ import otp from '../assets/images/otp.png';
 const Otp = ({navigation}) => {
   return (
     <SafeAreaView style={StyleSheet.container}>
-      <ScrollView style={styles.scrollView}>
+      <View style={{marginTop: Constants.statusBarHeight, paddingHorizontal: 16}}>
+        <MenuTitle value="OTP" onPress={() => navigation.goBack()} />
+      </View>
+      <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1, justifyContent: 'flex-start'}}>
         <View style={{paddingTop: 40, paddingBottom: 30}}>
-            <MenuTitle value="OTP" onPress={() => navigation.goBack()} />
             <View style={{width: '100%', display: 'flex', alignItems: 'center', paddingTop: 30}}>
                 <Image source={otp} style={{width: 200, height: 180}} />
             </View>
@@ -30,9 +32,9 @@ const Otp = ({navigation}) => {
         <TextInfo value="We have the code verification to your mobile number" fs="small" align="center" />
         <View style={{paddingVertical: 5}} />
         <TextInfo value="+254792922304" fs="mid" align="center" />
-        <View style={{paddingVertical: 20}}>
+        <View style={{paddingVertical: 30}}>
             <VerifCode />
-            <View style={{paddingVertical: 15}} />
+            <View style={{paddingVertical: 20}} />
             <Button value="Submit" theme="primary" onPress={() => navigation.navigate('moreInfo')} />
         </View>
       </ScrollView>
@@ -49,6 +51,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     paddingHorizontal: 16,
     minHeight: '100%',
+    display: 'flex',
   },
   text: {
     fontSize: 42,

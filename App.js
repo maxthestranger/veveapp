@@ -13,6 +13,7 @@ import Cart from "./views/cart";
 import Success from "./views/success";
 import Tracking from "./components/tracking";
 import Bucket from './views/bucket';
+import Favs from './views/favs';
 
 const Stack = createStackNavigator();
 
@@ -35,6 +36,7 @@ export default function App() {
         <Stack.Screen name="prodDetail" component={ProdDetail} />
         <Stack.Screen name="cart" component={Cart} />
         <Stack.Screen name="bucket" component={Bucket} />
+        <Stack.Screen name="favs" component={Favs} />
         <Stack.Screen name="success" component={Success} />
         <Stack.Screen name="tracking" component={Tracking} />
       </Stack.Navigator>

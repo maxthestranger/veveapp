@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
   card: {
     borderRadius: 13,
     position: 'relative',
-    width: 90,
-    height: 93,
+    width: '30%',
+    height: 100,
     marginVertical: 7,
   },
   text: {

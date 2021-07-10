@@ -1,9 +1,9 @@
-import asli from '../assets/images/asli.jpg';
-import kavila from '../assets/images/kavila.jpg';
-import muguka from '../assets/images/muguka.jpg';
-import veve from '../assets/images/veve.jpg';
-import huahd from '../assets/images/huahd.jpg';
-import wastawi from '../assets/images/wastawi.jpg';
+import asli from '../assets/images/asli.png';
+import alela from '../assets/images/alela.png';
+import giza from '../assets/images/giza.png';
+import jaba from '../assets/images/jaba.png';
+import kangeta from '../assets/images/kangeta.png';
+import mbaine from '../assets/images/mbaine.png';
 import sup1 from '../assets/images/sup1.jpg';
 import sup2 from '../assets/images/sup2.jpg';
 import sup3 from '../assets/images/sup3.jpg';
@@ -15,23 +15,23 @@ export const products = [
     },
     {
         name: 'Alela',
-        imgUrl: veve,
+        imgUrl: alela,
     },
     {
         name: 'Giza',
-        imgUrl: kavila,
+        imgUrl: giza,
     },
     {
         name: 'Jaba',
-        imgUrl: wastawi,
+        imgUrl: jaba,
     },
     {
         name: 'Kangeta',
-        imgUrl: muguka,
+        imgUrl: kangeta,
     },
     {
         name: 'Mbaine',
-        imgUrl: huahd,
+        imgUrl: mbaine,
     }
 ];
 

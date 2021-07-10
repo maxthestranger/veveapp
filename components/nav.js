@@ -31,6 +31,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     backgroundColor: "#F8F8F8",
     borderRadius: 10,
+  },
+  menuBar: {
+    width: '24%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingVertical: 15,
   },
   img: {

@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: 50,
   },
 });
 
