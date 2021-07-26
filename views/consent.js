@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   SafeAreaView,
@@ -6,29 +6,32 @@ import {
   View,
   Image,
   BackHandler,
-} from "react-native";
-import Constants from "expo-constants";
+} from 'react-native';
+import Constants from 'expo-constants';
 
-import TextInfo from "../components/textInfo";
-import Button from "../components/button";
-import logo from "../assets/images/veve.png";
+import TextInfo from '../components/textInfo';
+import Button from '../components/button';
+import logo from '../assets/images/veve.png';
 
 const Consent = ({ navigation }) => {
   const exitApp = () => {
     BackHandler.exitApp();
   };
 
-  const navAuth = () => navigation.navigate("auth");
+  const navAuth = () => navigation.navigate('auth');
   return (
     <SafeAreaView style={StyleSheet.container}>
-      <ScrollView style={styles.scrollView} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center'}}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}
+      >
         <View
           style={{
-            width: "100%",
+            width: '100%',
             paddingTop: 87,
             paddingBottom: 60,
-            display: "flex",
-            alignItems: "center",
+            display: 'flex',
+            alignItems: 'center',
           }}
         >
           <Image source={logo} style={{ width: 218, height: 67 }} />
@@ -40,7 +43,7 @@ const Consent = ({ navigation }) => {
         />
         <View style={{ paddingVertical: 10 }} />
         <TextInfo
-          value="This app is an e-comerce store for alcohol products and is not suitable for persons under the age of 18."
+          value="Veve is an e-commerce app for Khat Products also known as 'Miraa'. Despite Miraa being a legal product, it is highly recommended to be used by persons over the age of 18."
           fs="small"
           align="center"
         />
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
     marginTop: Constants.statusBarHeight,
   },
   scrollView: {
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     paddingHorizontal: 16,
     minHeight: '100%',
     display: 'flex',

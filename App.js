@@ -4,7 +4,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Consent from "./views/consent";
 import Auth from "./views/auth";
 import Otp from "./views/otp";
-import MoreInfo from "./views/moreInfo";
 import Home from "./views/home";
 import Supplier from "./views/supplier";
 import SupplierDetails from './views/supplierDetails';
@@ -29,7 +28,6 @@ export default function App() {
         <Stack.Screen name="consent" component={Consent} />
         <Stack.Screen name="auth" component={Auth} />
         <Stack.Screen name="otp" component={Otp} />
-        <Stack.Screen name="moreInfo" component={MoreInfo} />
         <Stack.Screen name="home" component={Home} />
         <Stack.Screen name="supplier" component={Supplier} />
         <Stack.Screen name="supplierDetails" component={SupplierDetails} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   StyleSheet,
   SafeAreaView,
@@ -6,37 +6,44 @@ import {
   View,
   TouchableOpacity,
   Image,
-} from "react-native";
-import Constants from "expo-constants";
+} from 'react-native';
+import Constants from 'expo-constants';
 
-import TextInfo from "../components/textInfo";
-import Button from "../components/button";
-import Input from "../components/input";
-import MenuTitle from "../components/menuTitle";
+import TextInfo from '../components/textInfo';
+import Button from '../components/button';
+import Input from '../components/input';
+import MenuTitle from '../components/menuTitle';
 import Search from '../components/search';
-import SecTitle from "../components/secTitle";
-import SupCard from "../components/supCard";
-import Nav from "../components/nav";
+import SecTitle from '../components/secTitle';
+import SupCard from '../components/supCard';
+import Nav from '../components/nav';
 
-import { suppliers } from "../modules/dummyData";
+import { suppliers } from '../modules/dummyData';
 import plus from '../assets/images/plus.png';
 
-const Supplier = ({navigation}) => {
+const Supplier = ({ navigation }) => {
   return (
     <SafeAreaView style={StyleSheet.container}>
       <ScrollView style={styles.scrollView}>
-        <View style={{paddingVertical: 20}} />
-        <MenuTitle value="Supplier" onPress={() => navigation.goBack()} />
+        <View style={{ paddingVertical: 20 }} />
+        <MenuTitle value="Suppliers" onPress={() => navigation.goBack()} />
         <Search />
         <View style={styles.grid}>
-          {
-            suppliers.map((supplier, index) => (
-              <SupCard key={index} name={supplier.name} location={supplier.location} imgUrl={supplier.imgUrl} deliveryTime={supplier.deliveryTime} distance={supplier.distance} verified={supplier.verified} onPress={() => navigation.navigate('supplierDetails')} />
-            ))
-          }
+          {suppliers.map((supplier, index) => (
+            <SupCard
+              key={index}
+              name={supplier.name}
+              location={supplier.location}
+              imgUrl={supplier.imgUrl}
+              deliveryTime={supplier.deliveryTime}
+              distance={supplier.distance}
+              verified={supplier.verified}
+              onPress={() => navigation.navigate('supplierDetails')}
+            />
+          ))}
         </View>
       </ScrollView>
-      <View style={{position: 'absolute', left: 0, bottom: 0, width: '100%',}}>
+      <View style={{ position: 'absolute', left: 0, bottom: 0, width: '100%' }}>
         <Nav />
       </View>
     </SafeAreaView>
@@ -49,7 +56,7 @@ const styles = StyleSheet.create({
     marginTop: Constants.statusBarHeight,
   },
   scrollView: {
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     paddingHorizontal: 16,
     minHeight: '100%',
   },
@@ -74,7 +81,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
 });
 
 export default Supplier;
